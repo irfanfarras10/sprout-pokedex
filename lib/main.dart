@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sprout_pokedex/screens/pokemon_detail_screen.dart';
 import 'package:sprout_pokedex/screens/pokemon_list_screen.dart';
 
 void main() {
@@ -15,12 +16,13 @@ class SproutPokedex extends StatelessWidget {
         fontFamily: 'NeueHaasDisplay',
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
+      initialRoute: '/pokemon',
       getPages: [
         GetPage(
-          name: '/',
+          name: '/pokemon',
           page: () => PokemonListScreen(),
-        )
+        ),
+        GetPage(name: '/pokemon/:id', page: () => PokemonDetailScreen())
       ],
     );
   }

@@ -26,4 +26,8 @@ class PokemonListController extends GetxController {
       data = PokemonListApiResponseModel.fromJson(apiResponse);
     });
   }
+
+  void viewDetail(int index) {
+    Get.toNamed('/pokemon/$index');
+  }
 }

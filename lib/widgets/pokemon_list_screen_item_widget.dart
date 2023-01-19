@@ -23,51 +23,57 @@ class PokemonListScreenItemWidget extends StatelessWidget {
             String showNumber = itemIndex.toString().padLeft(3, '0');
             return Card(
               color: Colors.white70,
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        '#$showNumber',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black54,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      '${data[index].name}',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black87,
-                      ),
-                    ),
-                    Expanded(
-                      child: Center(
-                        child: SizedBox(
-                          child: Image.network(
-                            'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/$itemIndex.png',
-                            fit: BoxFit.fitHeight,
-                            loadingBuilder: (context, child, loadingProgress) {
-                              if (loadingProgress == null) {
-                                return child;
-                              } else {
-                                return Center(
-                                  child: CircularProgressIndicator(
-                                    color: Colors.red,
-                                  ),
-                                );
-                              }
-                            },
+              child: InkWell(
+                onTap: () {
+                  controller.viewDetail(index);
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          '#$showNumber',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black54,
                           ),
                         ),
                       ),
-                    )
-                  ],
+                      Text(
+                        '${data[index].name}',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black87,
+                        ),
+                      ),
+                      Expanded(
+                        child: Center(
+                          child: SizedBox(
+                            child: Image.network(
+                              'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/$itemIndex.png',
+                              fit: BoxFit.fitHeight,
+                              loadingBuilder:
+                                  (context, child, loadingProgress) {
+                                if (loadingProgress == null) {
+                                  return child;
+                                } else {
+                                  return Center(
+                                    child: CircularProgressIndicator(
+                                      color: Colors.red,
+                                    ),
+                                  );
+                                }
+                              },
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             );
