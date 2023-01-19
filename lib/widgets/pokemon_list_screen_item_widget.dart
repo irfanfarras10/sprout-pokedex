@@ -25,7 +25,7 @@ class PokemonListScreenItemWidget extends StatelessWidget {
               color: Colors.white70,
               child: InkWell(
                 onTap: () {
-                  controller.viewDetail(index);
+                  controller.viewDetail(itemIndex);
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),

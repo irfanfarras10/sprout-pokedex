@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:sprout_pokedex/models/pokemon_list_api_response_model.dart';
-import 'package:sprout_pokedex/services/pokemon_list_api_service.dart';
+import 'package:sprout_pokedex/services/pokemon_api_service.dart';
 
 enum ViewState {
   loading,
@@ -9,7 +9,7 @@ enum ViewState {
 }
 
 class PokemonListController extends GetxController {
-  final PokemonListApiService apiService = PokemonListApiService();
+  final PokemonApiService apiService = PokemonApiService();
   Rx<ViewState> viewState = ViewState.loading.obs;
   PokemonListApiResponseModel data = PokemonListApiResponseModel();
 
