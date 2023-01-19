@@ -10,9 +10,10 @@ final Dio httpClient = Dio(options);
 
 class PokemonListApiService {
   Future<dynamic> getPokemonListData() async {
-    // await httpClient.get('/pokemon').then((value) {
-    //   return value.data;
-    // });
-    await Future.delayed(Duration(seconds: 10));
+    Map<String, dynamic> data = {};
+    await httpClient.get('/pokemon?limit=50').then((value) {
+      data = value.data;
+    });
+    return data;
   }
 }
