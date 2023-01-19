@@ -21,5 +21,5 @@ The UI design created follows [UI Design Reference](https://www.uplabs.com/posts
 
 ## Third Party Library Used
 
- - <b>Dio</b>: Dio for HTTP Client
- - <b>Get</b>: GetX for State Management
+ - <b><a href="https://pub.dev/packages/dio">Dio</a></b>: Dio for HTTP Client
+ - <b><a href="https://pub.dev/packages/get">Get</a></b>: GetX for State Management
