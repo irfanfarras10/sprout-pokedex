@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:sprout_pokedex/pokemon_list/screens/pokemon_list_screen.dart';
+import 'package:get/get.dart';
+import 'package:sprout_pokedex/screens/pokemon_list_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(SproutPokedex());
 }
 
-class MyApp extends StatelessWidget {
+class SproutPokedex extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'NeueHaasDisplay',

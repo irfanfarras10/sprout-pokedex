@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sprout_pokedex/controllers/pokemon_list_controller.dart';
 
 class PokemonListScreen extends StatelessWidget {
   const PokemonListScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final PokemonListController controller = Get.put(PokemonListController());
     return Scaffold(
       body: Container(
         height: MediaQuery.of(context).size.height,
