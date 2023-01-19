@@ -162,7 +162,154 @@ class PokemonDetailScreen extends StatelessWidget {
                             topRight: Radius.circular(50.0),
                           ),
                         ),
-                      )
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(30, 30, 30, 30),
+                          child: DefaultTabController(
+                              length: 4, // length of tabs
+                              initialIndex: 0,
+                              child: Column(
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.stretch,
+                                  children: <Widget>[
+                                    Container(
+                                      child: TabBar(
+                                        labelColor: Colors.blueAccent,
+                                        labelStyle: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                        unselectedLabelColor: Colors.black,
+                                        tabs: [
+                                          Tab(text: 'About'),
+                                          Tab(text: 'Base Stats'),
+                                          Tab(text: 'Evolution'),
+                                          Tab(text: 'Moves'),
+                                        ],
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Container(
+                                          child: TabBarView(children: <Widget>[
+                                        Container(
+                                          child: Column(
+                                            children: [
+                                              SizedBox(
+                                                height: 20.0,
+                                              ),
+                                              Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Text(
+                                                    'Height',
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Colors.black54,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    '${controller.data.height} cm      ',
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              SizedBox(
+                                                height: 15.0,
+                                              ),
+                                              Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Text(
+                                                    'Weight',
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Colors.black54,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    '${controller.data.weight}   kg     ',
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              SizedBox(
+                                                height: 15.0,
+                                              ),
+                                              Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Text(
+                                                    'Abilities',
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Colors.black54,
+                                                    ),
+                                                  ),
+                                                  Row(
+                                                    children: List.generate(
+                                                      controller.data.abilities!
+                                                          .length,
+                                                      (index) {
+                                                        return Text(
+                                                          '${controller.data.abilities![index].ability!.name}      ',
+                                                          style: TextStyle(
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                          ),
+                                                        );
+                                                      },
+                                                    ),
+                                                  )
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                        Container(
+                                          child: Center(
+                                            child: Text('Display Tab 2',
+                                                style: TextStyle(
+                                                    fontSize: 22,
+                                                    fontWeight:
+                                                        FontWeight.bold)),
+                                          ),
+                                        ),
+                                        Container(
+                                          child: Center(
+                                            child: Text('Display Tab 3',
+                                                style: TextStyle(
+                                                    fontSize: 22,
+                                                    fontWeight:
+                                                        FontWeight.bold)),
+                                          ),
+                                        ),
+                                        Container(
+                                          child: Center(
+                                            child: Text('Display Tab 4',
+                                                style: TextStyle(
+                                                    fontSize: 22,
+                                                    fontWeight:
+                                                        FontWeight.bold)),
+                                          ),
+                                        ),
+                                      ])),
+                                    )
+                                  ])),
+                        ),
+                      ),
                     ],
                   ),
                 ),
