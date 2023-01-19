@@ -52,6 +52,17 @@ class PokemonListScreenItemWidget extends StatelessWidget {
                           child: Image.network(
                             'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/$itemIndex.png',
                             fit: BoxFit.fitHeight,
+                            loadingBuilder: (context, child, loadingProgress) {
+                              if (loadingProgress == null) {
+                                return child;
+                              } else {
+                                return Center(
+                                  child: CircularProgressIndicator(
+                                    color: Colors.red,
+                                  ),
+                                );
+                              }
+                            },
                           ),
                         ),
                       ),
