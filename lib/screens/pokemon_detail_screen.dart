@@ -7,10 +7,35 @@ class PokemonDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final PokemonDetailController detail = Get.put(PokemonDetailController());
-    return const Scaffold(
-      body: Center(
-        child: Text('Pokemon Detail Page'),
+    final PokemonDetailController controller =
+        Get.put(PokemonDetailController());
+    return Scaffold(
+      body: Obx(
+        () {
+          Widget body;
+          body = Center(
+            child: CircularProgressIndicator(
+              color: Colors.red,
+            ),
+          );
+          if (controller.viewState.value == ViewState.finish) {
+            body = Column(
+              children: [
+                Expanded(
+                  child: Center(child: Text('Atas')),
+                ),
+                Expanded(
+                  child: Center(child: Text('Bawah')),
+                ),
+              ],
+            );
+          }
+          return Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: body,
+          );
+        },
       ),
     );
   }

@@ -21,6 +21,7 @@ class PokemonDetailController extends GetxController {
   Future<void> loadData() async {
     await apiService.getPokemonDetailData(id).then((apiResponse) {
       print(apiResponse);
+      viewState.value = ViewState.finish;
     });
   }
 }
