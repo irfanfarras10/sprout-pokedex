@@ -12,9 +12,7 @@ class PokemonListScreen extends StatelessWidget {
     return Obx(
       () {
         Widget body;
-        body = Container(
-          width: MediaQuery.of(context).size.width,
-          height: 400,
+        body = Expanded(
           child: Center(
             child: CircularProgressIndicator(
               color: Colors.red,

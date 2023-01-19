@@ -15,7 +15,13 @@ class SproutPokedex extends StatelessWidget {
         fontFamily: 'NeueHaasDisplay',
       ),
       debugShowCheckedModeBanner: false,
-      home: PokemonListScreen(),
+      initialRoute: '/',
+      getPages: [
+        GetPage(
+          name: '/',
+          page: () => PokemonListScreen(),
+        )
+      ],
     );
   }
 }
