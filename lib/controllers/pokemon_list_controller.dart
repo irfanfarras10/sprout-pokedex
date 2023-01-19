@@ -9,10 +9,17 @@ enum ViewState {
 
 class PokemonListController extends GetxController {
   final PokemonListApiService apiService = PokemonListApiService();
+  Rx<ViewState> viewState = ViewState.loading.obs;
 
   @override
   void onInit() async {
-    await apiService.getPokemonListData();
+    await loadData();
     super.onInit();
+  }
+
+  Future<void> loadData() async {
+    await apiService.getPokemonListData().then((apiResponse) {
+      viewState.value = ViewState.finish;
+    });
   }
 }
