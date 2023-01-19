@@ -279,8 +279,247 @@ class PokemonDetailScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Container(
+                                          padding: EdgeInsets.only(
+                                            top: 30.0,
+                                            right: 20.0,
+                                          ),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Expanded(
+                                                    child: Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                        left: 15,
+                                                      ),
+                                                      child: Text(
+                                                        'HP',
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          color: Colors.black54,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 40.0,
+                                                  ),
+                                                  Expanded(
+                                                    child: Text(
+                                                      '${controller.data.stats![0].baseStat}',
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 40.0,
+                                                  ),
+                                                  Expanded(
+                                                    child:
+                                                        LinearProgressIndicator(
+                                                      value: controller.data
+                                                          .stats![0].baseStat!
+                                                          .toDouble(),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                              SizedBox(
+                                                height: 10.0,
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Expanded(
+                                                    child: Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                        left: 15,
+                                                      ),
+                                                      child: Text(
+                                                        'Attack',
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          color: Colors.black54,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 40.0,
+                                                  ),
+                                                  Expanded(
+                                                    child: Text(
+                                                      '${controller.data.stats![1].baseStat}',
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 40.0,
+                                                  ),
+                                                  Expanded(
+                                                    child:
+                                                        LinearProgressIndicator(
+                                                      value: controller.data
+                                                          .stats![1].baseStat!
+                                                          .toDouble(),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                              SizedBox(
+                                                height: 10.0,
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Expanded(
+                                                    child: Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                        left: 15,
+                                                      ),
+                                                      child: Text(
+                                                        'Defense',
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          color: Colors.black54,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 40.0,
+                                                  ),
+                                                  Expanded(
+                                                    child: Text(
+                                                      '${controller.data.stats![2].baseStat}',
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 40.0,
+                                                  ),
+                                                  Expanded(
+                                                    child:
+                                                        LinearProgressIndicator(
+                                                      value: controller.data
+                                                          .stats![2].baseStat!
+                                                          .toDouble(),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                              SizedBox(
+                                                height: 10.0,
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Expanded(
+                                                    child: Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                        left: 15,
+                                                      ),
+                                                      child: Text(
+                                                        'Sp. Atk',
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          color: Colors.black54,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 40.0,
+                                                  ),
+                                                  Expanded(
+                                                    child: Text(
+                                                      '${controller.data.stats![3].baseStat}',
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 40.0,
+                                                  ),
+                                                  Expanded(
+                                                    child:
+                                                        LinearProgressIndicator(
+                                                      value: controller.data
+                                                          .stats![3].baseStat!
+                                                          .toDouble(),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                              SizedBox(
+                                                height: 10.0,
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Expanded(
+                                                    child: Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                        left: 15,
+                                                      ),
+                                                      child: Text(
+                                                        'Sp. Def',
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          color: Colors.black54,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 40.0,
+                                                  ),
+                                                  Expanded(
+                                                    child: Text(
+                                                      '${controller.data.stats![4].baseStat}',
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 40.0,
+                                                  ),
+                                                  Expanded(
+                                                    child:
+                                                        LinearProgressIndicator(
+                                                      value: controller.data
+                                                          .stats![3].baseStat!
+                                                          .toDouble(),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Container(
                                           child: Center(
-                                            child: Text('Display Tab 2',
+                                            child: Text('Evolution',
                                                 style: TextStyle(
                                                     fontSize: 22,
                                                     fontWeight:
@@ -289,16 +528,7 @@ class PokemonDetailScreen extends StatelessWidget {
                                         ),
                                         Container(
                                           child: Center(
-                                            child: Text('Display Tab 3',
-                                                style: TextStyle(
-                                                    fontSize: 22,
-                                                    fontWeight:
-                                                        FontWeight.bold)),
-                                          ),
-                                        ),
-                                        Container(
-                                          child: Center(
-                                            child: Text('Display Tab 4',
+                                            child: Text('Moves',
                                                 style: TextStyle(
                                                     fontSize: 22,
                                                     fontWeight:
