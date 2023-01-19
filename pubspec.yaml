@@ -1,5 +1,5 @@
 name: sprout_pokedex
-description: A new Flutter project.
+description: Simple Pokedex App using Flutter and PokeAPI.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
