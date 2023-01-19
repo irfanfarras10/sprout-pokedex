@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sprout_pokedex">
    <application
-        android:label="sprout_pokedex"
+        android:label="Sprout Pokedex"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
