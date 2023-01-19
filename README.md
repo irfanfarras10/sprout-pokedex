@@ -6,7 +6,8 @@
 ## <center>Sprout Pokedex Flutter App</center>
 
  A Pokedex Android app built with Flutter, using  <span><a href="https://pokeapi.co">PokeAPI</a></span> datasource.
-
+ 
+## Download Now
 <b><a href="https://github.com/irfanfarras10/sprout-pokedex/releases/download/v1.0.0/Sprout.Pokedex.apk">Download APK</a></b>
 
 ## Screenshot
